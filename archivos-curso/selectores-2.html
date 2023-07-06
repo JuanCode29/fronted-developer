@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*Selector universal*/
+        *{
+            background-color: azure;
+        }
+        /*Selector de elemento o de tipo*/
+        p{
+            color: blue;
+        }
+        /*Selector de clase*/
+        .miclase{
+            font-weight: bold;
+        }
+        /*Selector de ID*/
+        #miid{
+            background-color: yellow;
+        }
+        /*Selector de atributo*/
+        input[type="text"]{
+            border: 1px solid black;
+        }
+        /*SELECTORES COMBINADORES*/
+        /*Selectores descendientes*/
+        div p{
+            margin: 10px;
+        }
+        /*Selector de hijo directo*/
+        div >p{
+            color: green;
+        }
+        ul > li{
+            color: green;
+        }
+        /*Selector adyasente*/
+        h2 + p{
+            font-style: italic;
+        }
+        /*Selector general de hermanos*/
+        h2 ~ p{
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Título</h1>
+    <div>
+        <h2>Subtítulo</h2>
+        <p>Este es un párrafo dentro de un div.</p>
+        <p class="miclase">Este es otro párrafo con la clase "miclase".</p>
+            <secction>
+                <p>No soy un hijo directo de div, pero sí un descendiente</p>
+            </secction>
+    </div>
+    <ul>
+        <li>Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+    </ul>
+    <h2 id="miid">Otro subtítulo</h2>
+    <input type="text" placeholder="Texto de ejemplo">
+    <p>Este es otro párrafo.</p>
+</body>
+</html>
