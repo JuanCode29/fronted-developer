@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul li{
+            list-style-type: none;
+        }
+        /* Pseudoclase :nth-child() */
+        ul li:nth-child(odd){
+            background-color: lightgray;
+        }
+        /* Pseudoelemento ::before */
+        ul li::before{
+            content: "🏍";
+            color: red;
+            font-size: 40px;
+        }
+        /* Pseudoclase :first-child */
+        ul li:first-child{
+            font-weight: bold;
+            color: blueviolet;
+        }
+        /* Pseudoelemento ::before */
+        p.special::before{
+            content: "¡";
+            font-weight: bold;
+            font-size: 30px;
+            color: deeppink;
+        }
+    </style>
+</head>
+<body>
+    <h1>Título</h1>
+    <ul>
+        <li>Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+        <li>Elemento 4</li>
+        <li>Elemento 5</li>
+    </ul>
+    <p class="special">Este es un párrafo especial.</p>
+    <a href="#">Enlace 1</a>
+    <a href="#">Enlace 2</a>
+    <a href="#">Enlace 3</a>
+</body>
+</html>
