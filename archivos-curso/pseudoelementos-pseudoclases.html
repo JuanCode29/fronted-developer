@@ -5,18 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        ul li{
-            list-style-type: none;
+        h1{
+            color: salmon;
         }
+        ul li{
+            list-style: none;
+        }
+        a{
+            display: block;
+        }
+        input{
+            display: block;
+        }
+        /* Pseudoclase :hover */
+        h1:hover{
+            color: skyblue;
+        }
+        
         /* Pseudoclase :nth-child() */
         ul li:nth-child(odd){
-            background-color: lightgray;
+            background-color: whitesmoke;
         }
-        /* Pseudoelemento ::before */
-        ul li::before{
-            content: "🏍";
-            color: red;
-            font-size: 40px;
+        ul li:nth-child(2n){
+            background-color:blanchedalmond;
         }
         /* Pseudoclase :first-child */
         ul li:first-child{
@@ -24,11 +35,32 @@
             color: blueviolet;
         }
         /* Pseudoelemento ::before */
-        p.special::before{
+        ul li::before{
+            content: "🏍";
+            font-size: 40px;
+        }
+         p.special::before{
             content: "¡";
             font-weight: bold;
             font-size: 30px;
             color: deeppink;
+        }
+        /* Pseudoelemento ::after */
+        ul li::after{
+            content: "🚲";
+            font-size: 40px;
+        }
+        a::after{
+            content: "(Enlace)";
+            font-style: italic;
+        }
+        /*Pseudoclase combinado con Pseudoelemento*/
+        ul li:hover::first-letter{
+            color: red;
+        }
+        /* Pseudoelemento ::placeholder */
+        ::placeholder{
+            color: teal;
         }
     </style>
 </head>
@@ -45,5 +77,7 @@
     <a href="#">Enlace 1</a>
     <a href="#">Enlace 2</a>
     <a href="#">Enlace 3</a>
+
+    <input type="text" placeholder="Hola">
 </body>
 </html>
